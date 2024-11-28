@@ -1,0 +1,5 @@
+# Ignorar la carpeta music
+music/
+
+# Ignorar la carpeta sound
+sound/
