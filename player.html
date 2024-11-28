@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reproductor</title>
+    <link rel="stylesheet" href="styles/player.css">
+</head>
+<body>
+    <div class="container">
+        <div class="button-controls">
+            <button class="music-button" onclick="toggleGrid('music')">Música</button>
+            <button class="vfx-button" onclick="toggleGrid('vfx')">VFX</button>
+        </div>
+        <div id="currentTrack" class="current-track"></div>
+        <div class="button-grid" id="buttonGrid1">
+            <!-- Primer conjunto de botones (Grid de Música) -->
+            <button class="grid-button" onclick="playLoop('music/musica1.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 1</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 2</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 3</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 4</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 5</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 6</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 7</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 8</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 9</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 10</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 11</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 12</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 13</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 14</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 15</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 16</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 17</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 18</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 19</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3')">
+                <img src="./images/music.jpg" alt="Image 1">
+                <span class="button-label">Música 20</span>
+            </button>
+        </div>
+        <div class="button-grid" id="buttonGrid2" style="display: none;">
+            <!-- Segundo conjunto de botones (Grid de VFX) -->
+            <button class="grid-button" onclick="playEffect('sound/sonido1.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 1</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 2</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 3</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 4</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 5</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 6</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 7</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 8</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 9</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 10</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 11</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 12</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 13</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 14</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 15</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 16</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 17</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 18</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 19</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="Image 1">
+                <span class="button-label">VFX 20</span>
+            </button>
+        </div>
+        <div class="control-buttons" id="controlButtons">
+            <button class="pause-button" onclick="backgroundAudio.currentTime = 0">Reiniciar</button>
+            <button class="stop-button" onclick="stopBackgroundAudio()">Stop</button>
+            <button class="fade-button" onclick="fadeOutBackgroundAudio()">Fade Out</button>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/audioController.js"></script>
+</body>
+</html>
