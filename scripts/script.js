@@ -1,4 +1,4 @@
-let currentGrid = 'music';
+let currentGrid = 'music-bg';
 
 function toggleGrid(mode) {
     const grid1 = document.getElementById('buttonGrid1');
@@ -8,16 +8,14 @@ function toggleGrid(mode) {
     if (mode === 'vfx') {
         grid1.style.display = 'none';
         grid2.style.display = 'flex';
-        document.body.style.background = 'linear-gradient(180deg,rgba(255, 188, 188, 0.76),rgb(49, 49, 118), transparent), url("./images/vfxbg.webp")'; 
-        document.body.style.backgroundSize = 'cover'; // Para que la imagen cubra todo el fondo
+        document.body.className = 'vfx-bg'; // Aplica una clase específica para el fondo VFX
         currentGrid = 'vfx';
         controlButtons.style.display = 'none'; // Ocultar botones de control en VFX
     } else {
         grid1.style.display = 'flex';
         grid2.style.display = 'none';
-        document.body.style.background = 'linear-gradient(180deg,rgba(255, 188, 188, 0.76),rgb(49, 49, 118), transparent), url("./images/musicbg.jpg")'; 
-        document.body.style.backgroundSize = 'cover'; // Para que la imagen cubra todo el fondo
+        document.body.className = 'music-bg'; // Aplica una clase específica para el fondo de música
         currentGrid = 'music';
-        controlButtons.style.display = 'block'; // Mostrar botones de control en Música
+        controlButtons.style.display = 'flex'; // Mostrar botones de control en Música
     }
 }

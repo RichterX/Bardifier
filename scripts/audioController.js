@@ -12,7 +12,7 @@ function playLoop(src) {
   backgroundAudio.play();
 
   const currentTrack = document.getElementById('currentTrack');
-  currentTrack.textContent = `Reproduciendo actualmente: ${src.split('/').pop()}`;
+  currentTrack.textContent = `🧛 Reproduciendo: ${src.split('/').pop()} 🧛`;
 }
 
 function playEffect(src) {
@@ -45,7 +45,7 @@ function fadeOutBackgroundAudio() {
             backgroundAudio.pause();
             clearInterval(fadeOutInterval);
         }
-    }, 500); // Ajusta la velocidad del fade out
+    }, 100); // Ajusta la velocidad del fade out
 
     const currentTrack = document.getElementById('currentTrack');
     currentTrack.textContent = '';
