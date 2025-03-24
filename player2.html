@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bardifier - Zombie: AFMBE</title>
+    <link rel="stylesheet" href="styles/player.css">
+    <link rel="icon" href="images/favicon.png" type="image/x-icon">
+</head>
+<body class="music-bg">
+    <div class="container">
+        <div class="button-controls">
+            <button class="music-button btn-grad" onclick="toggleGrid('music')">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 15.5V5s3 1 3 4m-7-3H4m9 4H4m4 4H4m13 2.4c0 1.326-1.343 2.4-3 2.4s-3-1.075-3-2.4 1.343-2.4 3-2.4 3 1.075 3 2.4Z"/>
+                  </svg>
+                  
+                Música</button>
+            <button class="vfx-button btn-grad" onclick="toggleGrid('vfx')">
+                <svg class="w-6 h-6 text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                    <path fill="currentColor" d="M12 17a2 2 0 0 1 2 2h-4a2 2 0 0 1 2-2Z"/>
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.815 9H16.5a2 2 0 1 0-1.03-3.707A1.87 1.87 0 0 0 15.5 5 1.992 1.992 0 0 0 12 3.69 1.992 1.992 0 0 0 8.5 5c.002.098.012.196.03.293A2 2 0 1 0 7.5 9h3.388m2.927-.985v3.604M10.228 9v2.574M15 16h.01M9 16h.01m11.962-4.426a1.805 1.805 0 0 1-1.74 1.326 1.893 1.893 0 0 1-1.811-1.326 1.9 1.9 0 0 1-3.621 0 1.8 1.8 0 0 1-1.749 1.326 1.98 1.98 0 0 1-1.87-1.326A1.763 1.763 0 0 1 8.46 12.9a2.035 2.035 0 0 1-1.905-1.326A1.9 1.9 0 0 1 4.74 12.9 1.805 1.805 0 0 1 3 11.574V12a9 9 0 0 0 18 0l-.028-.426Z"/>
+                  </svg>
+                  
+                VFX</button>
+        </div>
+        <div id="currentTrack" class="current-track"></div>
+        <div class="button-grid" id="buttonGrid1">
+            <!-- Primer conjunto de botones (Grid de Música) -->
+            <button class="grid-button" onclick="playLoop('music/Preparacion.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Preparación</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/Prologo.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Prologo</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/guarida_hombres_lobo.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Guarida de los Hombres Lobo</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/templo_ambar.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Templo de Ámbar</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/combate_hombres_lobo.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Combate - Hombres Lobo</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/vieja_carretera_svalich.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Camino viejo de Svalich</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/torre_van_richten.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Torre de Van Richten</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/mago_vinos.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Mago de los Vinos</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/colina_ayer.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Colina del Ayer</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/combate_colina_ayer_strahd.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Colina del Ayer - Combate con Strahd</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/combate_colina_ayer.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Combate Colina del Ayer</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/combate_a.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Combate A</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/combate_b.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Combate B</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/krezk.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Aldea de Krezk</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/estanque_sagrado_krezk.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Estanque Sagrado - Krezk</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/abadia.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Abadía de Santa Markovia</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/ruinas_berez.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Ruinas de Bérez</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/combate_baba_lysaga.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Combate Baba Lysaga</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/cabania_reptante_baba.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Cabaña Reptante Baba Lysaga</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/paso_tsolenka.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Paso Tsolenka</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/escape.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">¡Escape!</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Música 22</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/musica2.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">Música 23</span>
+            </button>
+            <button class="grid-button" onclick="playLoop('music/despedida.mp3', '🧟')">
+                <img src="./images/music3.jpg" alt="Music icon">
+                <span class="button-label">¡Hasta Siempre!</span>
+            </button>
+        </div>
+        <div class="button-grid" id="buttonGrid2" style="display: none;">
+            <!-- Segundo conjunto de botones (Grid de VFX) -->
+            <button class="grid-button" onclick="playEffect('sound/aullido_lobo.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">Aullido de Lobo</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/chasquido_cerradura.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">Cerradura abierta</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/puerta_pesada_metal.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">Puerta de metal abriéndose</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/rugido_dragon_joven.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">Rugido de Dragón</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/torre_derruida.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">Torre derrumbándose</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/trueno.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">Trueno</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/multitud_chillando.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">Multitud en pánico</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/puerta_piedra.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">Puerta de Piedra</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/druidas_comienzan_ritual.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">Druidas comienzan el ritual</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/vitores_vino.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">Vitores Vallaki</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/alarma_calaveras.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">Alarma Calaveras - Berez</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido_viola.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">Viola sonando</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonidos_pelea_fantasma.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">Pelea entre Fantasmas</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">VFX 14</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">VFX 15</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">VFX 16</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">VFX 17</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">VFX 18</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">VFX 19</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">VFX 20</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">VFX 21</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">VFX 22</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">VFX 23</span>
+            </button>
+            <button class="grid-button" onclick="playEffect('sound/sonido2.mp3')">
+                <img src="./images/vfx.jpg" alt="VFX icon">
+                <span class="button-label">VFX 24</span>
+            </button>
+        </div>
+        <div class="control-buttons" id="controlButtons">
+            <button class="pause-button btn-grad-repr" onclick="backgroundAudio.currentTime = 0">Reiniciar</button>
+            <button class="stop-button btn-grad-repr" onclick="stopBackgroundAudio()">Stop</button>
+            <button class="fade-button btn-grad-repr" onclick="fadeOutBackgroundAudio()">Fade Out</button>
+        </div>
+    </div>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/audioController.js"></script>
+</body>
+</html>

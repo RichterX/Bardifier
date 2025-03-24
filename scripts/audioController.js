@@ -1,6 +1,6 @@
 let backgroundAudio = new Audio();
 
-function playLoop(src) {
+function playLoop(src, icon = '🧛') {
   // Si ya hay música de fondo sonando, la detiene antes de iniciar una nueva.
   if (!backgroundAudio.paused) {
     backgroundAudio.pause();
@@ -12,7 +12,7 @@ function playLoop(src) {
   backgroundAudio.play();
 
   const currentTrack = document.getElementById('currentTrack');
-  currentTrack.textContent = `🧛 Reproduciendo: ${src.split('/').pop()} 🧛`;
+  currentTrack.textContent = `${icon} Reproduciendo: ${src.split('/').pop()} ${icon}`;
 }
 
 function playEffect(src) {
